@@ -55,7 +55,11 @@ document.getElementById('total').addEventListener('click', function () {
     const playerCostTagNumber = parseInt(playerCostTagString);
     const manager = getInputValueById('input2');
     const cotch = getInputValueById('input3');
-
+    const input = document.getElementById('input1');
+    const inputValue = input.value;
+    if(inputValue == ''){
+        return alert('hahfa')
+    }
     const totalCost = cotch + manager + playerCostTagNumber;
     const totalCostTag = document.getElementById('totalCost');
     if(isNaN(manager && cotch)){
