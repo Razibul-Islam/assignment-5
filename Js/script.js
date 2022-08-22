@@ -4,15 +4,15 @@ for (const button of selectButton) {
     button.addEventListener('click', function (event) {
         const playerName = event.target.parentNode.firstElementChild.innerText;
         const playerDisable = event.target;
-        this.disabled = true;
         // create condition
-        if(document.getElementsByTagName('li').length == '5'){
+        if (document.getElementsByTagName('li').length == '5') {
             alert(`sorry you can't select more than 5 players`);
             return;
         }
-        if(this.disabled = true && document.getElementsByTagName('li').length == document.getElementsByTagName('li').length){
+        if (document.getElementsByTagName('li').length <= 5) {
+            this.disabled = true;
             playerDisable.style.backgroundColor = 'gray';
-        }else{
+        } else {
             playerDisable.style.backgroundColor = '#015196';
         }
         // create li tag
@@ -28,3 +28,30 @@ for (const button of selectButton) {
         unorderListInner.appendChild(spanLi);
     })
 }
+// common function to get input value
+function getInputValueById(elementId) {
+    const input = document.getElementById(elementId);
+    const inputString = input.value;
+    const inputNumber = parseInt(inputString);
+    return inputNumber;
+}
+
+document.getElementById('Calculate').addEventListener('click', function () {
+    const input = getInputValueById('input1');
+    const liLength = document.getElementsByTagName('li').length;
+    const playerCost = liLength * input;
+    const playerCostTag = document.getElementById('playerCost');
+    playerCostTag.innerText = playerCost;
+})
+
+document.getElementById('total').addEventListener('click', function () {
+    const playerCostTag = document.getElementById('playerCost');
+    const playerCostTagString = playerCostTag.innerText;
+    const playerCostTagNumber = parseInt(playerCostTagString);
+    const manager = getInputValueById('input2');
+    const cotch = getInputValueById('input3');
+
+    const totalCost = cotch + manager + playerCostTagNumber;
+    const totalCostTag = document.getElementById('totalCost');
+    totalCostTag.innerText = totalCost;
+})

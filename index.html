@@ -150,22 +150,23 @@
           <h3 class="text-center text-2xl font-semibold pt-5">Budget</h3>
           <div class="p-6">
             <p class="flex justify-between">
-              <span class="text-inputOut">Per Player</span> <input type="text" size="8" class="">
+              <span class="text-inputOut">Per Player</span> <input type="text" size="8" class="bg-main border"
+                id="input1">
             </p>
-            <button class="font-semibold py-3 px-16 bg-playerBtn mt-5 ml-3">Calculate</button>
+            <button class="font-semibold py-3 px-16 bg-playerBtn mt-5 ml-3" id="Calculate">Calculate</button>
 
             <p class="flex justify-between mt-7"><span class="text-inputOut">Player Expensess</span>
-              <span><span>$</span>5000</span>
+              <span>$<span id="playerCost">0</span></span>
             </p>
             <p class="flex justify-between mt-4">
-              <span class="text-inputOut">Manager</span> <input type="text" size="8" class="">
+              <span class="text-inputOut">Manager</span> <input type="text" size="8" class="bg-main border" id="input2">
             </p>
             <p class="flex justify-between my-4">
-              <span class="text-inputOut">Coach</span> <input type="text" size="8" class="">
+              <span class="text-inputOut">Coach</span> <input type="text" size="8" class="bg-main border" id="input3">
             </p>
-            <button class="font-semibold py-3 px-10 bg-playerBtn mt-5 ml-3">Calculate Total</button>
+            <button class="font-semibold py-3 px-10 bg-playerBtn mt-5 ml-3" id="total">Calculate Total</button>
             <p class="flex justify-between mt-7"><span class="text-inputOut">Total</span> <span
-                class="text-header"><span>$</span>5000</span></p>
+                class="text-header"><span>$</span><span id="totalCost">0</span></span></p>
           </div>
         </div>
       </div>
