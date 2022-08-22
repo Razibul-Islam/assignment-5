@@ -58,7 +58,7 @@ document.getElementById('total').addEventListener('click', function () {
     const input = document.getElementById('input1');
     const inputValue = input.value;
     if(inputValue == ''){
-        return alert('hahfa')
+        return alert('first enter per player cost')
     }
     const totalCost = cotch + manager + playerCostTagNumber;
     const totalCostTag = document.getElementById('totalCost');
