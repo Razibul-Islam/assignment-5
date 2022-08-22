@@ -41,7 +41,12 @@ document.getElementById('Calculate').addEventListener('click', function () {
     const liLength = document.getElementsByTagName('li').length;
     const playerCost = liLength * input;
     const playerCostTag = document.getElementById('playerCost');
-    playerCostTag.innerText = playerCost;
+    if(isNaN(input)){
+        alert('Please enter a valid number!');
+        return playerCostTag.innerText = '0';
+    }else{
+        playerCostTag.innerText = playerCost;
+    }
 })
 
 document.getElementById('total').addEventListener('click', function () {
@@ -53,5 +58,10 @@ document.getElementById('total').addEventListener('click', function () {
 
     const totalCost = cotch + manager + playerCostTagNumber;
     const totalCostTag = document.getElementById('totalCost');
-    totalCostTag.innerText = totalCost;
+    if(isNaN(manager && cotch)){
+        alert('please enter a valid number')
+        return totalCostTag.innerText = '0';
+    }else{
+        totalCostTag.innerText = totalCost;
+    }
 })
